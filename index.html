@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Damilare Olayeye | Front End Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+        </label>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header id="home" class="hero-section">
+      <div class="overlay">
+        <div class="hero-content">
+          <h1>
+            I<span>'</span>m <br />
+            Damilare <br />
+            Olayeye <span>.</span>
+          </h1>
+          <p>Front End Developer</p>
+        </div>
+      </div>
+    </header>
+
+    <section id="portfolio" class="brief-info">
+      <div class="info-card">
+        <p>
+          I am a passionate Front End Developer dedicated to creating intuitive
+          and dynamic user experiences. I specialize in building responsive
+          websites and turning complex problems into elegant, clean code.
+        </p>
+        <a href="https://github.com/Dammy425" target="_blank" class="btn">
+          View GitHub Profile
+        </a>
+      </div>
+    </section>
+
+    <section id="skills" class="dark-section first-section">
+      <div class="container">
+        <div class="section-header">
+          <h1><span>01</span> Professional</h1>
+          <p>My Knowledge Level in Software</p>
+        </div>
+
+        <div class="skills-list">
+          <div class="skill-item">
+            <span class="skill-name">HTML & CSS</span>
+            <div class="bar-container">
+              <div class="bar-fill" style="width: 80%"></div>
+            </div>
+            <span class="skill-percent">80%</span>
+          </div>
+
+          <div class="skill-item">
+            <span class="skill-name">JavaScript</span>
+            <div class="bar-container">
+              <div class="bar-fill" style="width: 65%"></div>
+            </div>
+            <span class="skill-percent">65%</span>
+          </div>
+
+          <div class="skill-item">
+            <span class="skill-name">WordPress</span>
+            <div class="bar-container">
+              <div class="bar-fill" style="width: 40%"></div>
+            </div>
+            <span class="skill-percent">40%</span>
+          </div>
+
+          <div class="skill-item">
+            <span class="skill-name">Figma</span>
+            <div class="bar-container">
+              <div class="bar-fill" style="width: 70%"></div>
+            </div>
+            <span class="skill-percent">70%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="light-section">
+      <div class="container">
+        <div class="section-header">
+          <h1><span>02</span> Testimonials</h1>
+          <p>What Clients Say About Me</p>
+        </div>
+
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "Damilare is a fantastic developer. He delivered our website ahead
+              of schedule and the code quality was exceptional. Highly
+              recommended!"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4>Sarah Johnson</h4>
+                <span>Project Manager</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "He transformed our outdated site into a modern, responsive
+              masterpiece. His attention to detail is what sets him apart."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4>Michael Smith</h4>
+                <span>CEO, TechStart</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "Great communication and technical skills. He solved complex
+              JavaScript issues we were facing in record time."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4>David Brown</h4>
+                <span>Senior Developer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="dark-section contact-section">
+      <div class="container contact-container">
+        <div class="contact-left">
+          <h2>CONTACT</h2>
+          <p class="contact-desc">
+            I’m interested in freelance opportunities – especially ambitious or
+            large projects. However, if you have other requests or questions,
+            don’t hesitate to use the form.
+          </p>
+
+          <div class="contact-details">
+            <p><strong>Email:</strong> oluwadamilareolayeye@gmail.com</p>
+            <p><strong>Tel:</strong> +234-906-602-6436</p>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <form action="https://formspree.io/f/xykwydrw" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstname">First name *</label>
+                <input type="text" id="firstname" name="firstname" required />
+              </div>
+              <div class="form-group">
+                <label for="lastname">Last name *</label>
+                <input type="text" id="lastname" name="lastname" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5"></textarea>
+            </div>
+
+            <input type="hidden" name="_next" value="thanks.html" />
+
+            <button type="submit" class="btn submit-btn">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Damilare Olayeye</p>
+    </footer>
+  </body>
+</html>
