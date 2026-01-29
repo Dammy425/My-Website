@@ -167,7 +167,7 @@
         </div>
 
         <div class="contact-right">
-          <form action="https://formspree.io/f/xykwydrw" method="POST">
+          <form id="contact-form">
             <div class="form-row">
               <div class="form-group">
                 <label for="firstname">First name *</label>
@@ -199,14 +199,6 @@
               ></textarea>
             </div>
 
-            <!-- Redirect to your website after submit -->
-            <input
-              type="hidden"
-              name="_next"
-              value="https://dammy425.github.io/My-Website/"
-            />
-            <input type="hidden" name="_captcha" value="false" />
-
             <button type="submit" class="btn submit-btn">Send</button>
           </form>
         </div>
@@ -216,5 +208,8 @@
     <footer>
       <p>&copy; 2025 Damilare Olayeye</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
