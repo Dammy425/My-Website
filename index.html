@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Damilare Olayeye | Front End Developer</title>
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,10 +22,14 @@
     <nav class="navbar">
       <div class="nav-container">
         <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+        <!-- Updated Label with two icons -->
         <label for="nav-toggle" class="nav-toggle-label">
-          <span></span>
+          <i class="fas fa-bars hamburger"></i>
+          <i class="fas fa-times close-icon"></i>
         </label>
-        <ul>
+
+        <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -33,30 +42,29 @@
     <header id="home" class="hero-section">
       <div class="overlay">
         <div class="hero-content">
-          <h1>
-            I<span>'</span>m <br />
-            Damilare <br />
-            Olayeye <span>.</span>
-          </h1>
+          <h1>I<span>'</span>m <br />Damilare <br />Olayeye <span>.</span></h1>
           <p>Front End Developer</p>
         </div>
       </div>
     </header>
 
     <section id="portfolio" class="brief-info">
-      <div class="info-card">
-        <p>
-          I am a passionate Front End Developer dedicated to creating intuitive
-          and dynamic user experiences. I specialize in building responsive
-          websites and turning complex problems into elegant, clean code.
-        </p>
-        <a href="https://github.com/Dammy425" target="_blank" class="btn">
-          View GitHub Profile
-        </a>
+      <div class="container">
+        <div class="info-card">
+          <p>
+            I am a passionate Front End Developer dedicated to creating
+            intuitive and dynamic user experiences. I specialize in building
+            responsive websites and turning complex problems into elegant, clean
+            code.
+          </p>
+          <a href="https://github.com/Dammy425" target="_blank" class="btn"
+            >View GitHub Profile</a
+          >
+        </div>
       </div>
     </section>
 
-    <section id="skills" class="dark-section first-section">
+    <section id="skills" class="dark-section">
       <div class="container">
         <div class="section-header">
           <h1><span>01</span> Professions</h1>
@@ -71,7 +79,6 @@
             </div>
             <span class="skill-percent">80%</span>
           </div>
-
           <div class="skill-item">
             <span class="skill-name">JavaScript</span>
             <div class="bar-container">
@@ -79,7 +86,6 @@
             </div>
             <span class="skill-percent">65%</span>
           </div>
-
           <div class="skill-item">
             <span class="skill-name">WordPress</span>
             <div class="bar-container">
@@ -87,7 +93,6 @@
             </div>
             <span class="skill-percent">40%</span>
           </div>
-
           <div class="skill-item">
             <span class="skill-name">Figma</span>
             <div class="bar-container">
@@ -106,34 +111,13 @@
           <p>What Clients Say About Me</p>
         </div>
 
+        <div style="text-align: center; margin-bottom: 40px">
+          <button id="add-testimonial-btn" class="btn">
+            <i class="fas fa-plus"></i> Add Testimonial
+          </button>
+        </div>
+
         <div class="testimonial-grid">
-          <div class="testimonial-card">
-            <p class="testimonial-text">
-              "Damilare is a fantastic developer. He delivered our website ahead
-              of schedule and the code quality was exceptional. Highly
-              recommended!"
-            </p>
-            <div class="testimonial-author">
-              <div class="author-info">
-                <h4>Sarah Johnson</h4>
-                <span>Project Manager</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <p class="testimonial-text">
-              "He transformed our outdated site into a modern, responsive
-              masterpiece. His attention to detail is what sets him apart."
-            </p>
-            <div class="testimonial-author">
-              <div class="author-info">
-                <h4>Michael Smith</h4>
-                <span>CEO, TechStart</span>
-              </div>
-            </div>
-          </div>
-
           <div class="testimonial-card">
             <p class="testimonial-text">
               "Great communication and technical skills. He solved complex
@@ -147,6 +131,39 @@
             </div>
           </div>
         </div>
+
+        <div id="testimonial-modal" class="modal">
+          <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h3>Submit Your Testimonial</h3>
+            <form id="testimonial-form">
+              <div class="form-group">
+                <label for="t-name">Your Name *</label>
+                <input type="text" id="t-name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="t-role">Role / Position *</label>
+                <input type="text" id="t-role" name="role" required />
+              </div>
+              <div class="form-group">
+                <label for="t-email">Email *</label>
+                <input type="email" id="t-email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="t-message">Your Testimonial *</label>
+                <textarea
+                  id="t-message"
+                  name="testimonial"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn" style="width: 100%">
+                Send Testimonial
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -155,13 +172,17 @@
         <div class="contact-left">
           <h2>CONTACT</h2>
           <p class="contact-desc">
-            I’m interested in freelance opportunities – especially ambitious or
-            large projects. However, if you have other requests or questions,
-            don’t hesitate to use the form.
+            I’m interested in freelance opportunities. If you have other
+            requests or questions, don’t hesitate to use the form.
           </p>
-
           <div class="contact-details">
             <p><strong>Email:</strong> oluwadamilareolayeye@gmail.com</p>
+            <p>
+              <strong>WhatsApp Link:</strong>
+              <a href="https://wa.me/2349066026436" target="_blank"
+                >https://wa.me/2349066026436</a
+              >
+            </p>
             <p><strong>Tel:</strong> +234-906-602-6436</p>
           </div>
         </div>
@@ -178,17 +199,10 @@
                 <input type="text" id="lastname" name="lastname" required />
               </div>
             </div>
-
             <div class="form-group">
-              <label for="email">Email *</label>
-              <input type="email" id="email" name="email" required />
+              <label for="c-email">Email *</label>
+              <input type="email" id="c-email" name="email" required />
             </div>
-
-            <div class="form-group">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone" />
-            </div>
-
             <div class="form-group">
               <label for="message">Message</label>
               <textarea
@@ -198,15 +212,42 @@
                 required
               ></textarea>
             </div>
-
-            <button type="submit" class="btn submit-btn">Send</button>
+            <button type="submit" class="btn submit-btn">Send Message</button>
           </form>
         </div>
       </div>
     </section>
 
-    <footer>
-      <p>&copy; 2025 Damilare Olayeye</p>
+    <footer class="main-footer">
+      <div class="container footer-content">
+        <div class="footer-info">
+          <p>&copy; 2026 <span>Damilare Olayeye</span>. All rights reserved.</p>
+        </div>
+
+        <div class="footer-socials">
+          <a
+            href="https://github.com/Dammy425"
+            target="_blank"
+            aria-label="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/oluwadamilare-olayeye-bb02a0344/"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="#" target="_blank" aria-label="Twitter"
+            ><i class="fab fa-x-twitter"></i
+          ></a>
+          <a href="#" target="_blank" aria-label="Facebook"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="#" target="_blank" aria-label="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </div>
+      </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
