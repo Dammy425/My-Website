@@ -28,14 +28,20 @@ if (contactForm) {
 
     emailjs
       .sendForm("service_98pxfgj", "template_wbrwxvh", this)
+
       .then(() => {
         alert("Thank you for contacting us ✅");
         contactForm.reset();
       })
+
       .catch((error) => {
         console.error("Error:", error);
-        alert("Something went wrong. Try again later.");
+
+        alert(
+          "Something Went Wrong. \n Check Your Internet Connection or Try again later.",
+        );
       })
+
       .finally(() => {
         btn.innerText = originalText;
         btn.disabled = false;
@@ -75,14 +81,20 @@ testimonialForm.addEventListener("submit", function (e) {
 
   emailjs
     .sendForm("service_98pxfgj", "template_yi3o409", this)
+
     .then(() => {
       alert("Thanks! Your testimonial has been sent ✅");
       hideModal();
     })
+
     .catch((error) => {
       console.error("Failed ❌", error);
-      alert("Something went wrong. Try again later.");
+      ("Something Went Wrong. \n Check Your Internet Connection or Try again later.");
+      alert(
+        "Something Went Wrong. \n Check Your Internet Connection or Try again later.",
+      );
     })
+
     .finally(() => {
       submitBtn.innerText = "Send Testimonial";
       submitBtn.disabled = false;
