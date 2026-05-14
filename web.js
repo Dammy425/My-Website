@@ -30,16 +30,25 @@ if (contactForm) {
       .sendForm("service_98pxfgj", "template_wbrwxvh", this)
 
       .then(() => {
-        alert("Thank you for contacting us ✅");
+        Swal.fire({
+          icon: "success",
+          title: "Success",
+          text: "Thanks For Contacting Us.",
+          confirmButtonColor: "#28a745",
+          timer: 2500,
+          timerProgressBar: false,
+          showConfirmButton: false,
+        });
         contactForm.reset();
       })
 
       .catch((error) => {
-        console.error("Error:", error);
-
-        alert(
-          "Something Went Wrong. \n Check Your Internet Connection or Try again later.",
-        );
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "An Error Occured. Please Try Again.",
+          confirmButtonColor: "#d33",
+        });
       })
 
       .finally(() => {
@@ -83,16 +92,25 @@ testimonialForm.addEventListener("submit", function (e) {
     .sendForm("service_98pxfgj", "template_yi3o409", this)
 
     .then(() => {
-      alert("Thanks! Your testimonial has been sent ✅");
       hideModal();
+      Swal.fire({
+        icon: "success",
+        title: "Success",
+        text: "Thanks! Your testimonial has been sent.",
+        confirmButtonColor: "#28a745",
+        timer: 2500,
+        timerProgressBar: false,
+        showConfirmButton: false,
+      });
     })
 
     .catch((error) => {
-      console.error("Failed ❌", error);
-      ("Something Went Wrong. \n Check Your Internet Connection or Try again later.");
-      alert(
-        "Something Went Wrong. \n Check Your Internet Connection or Try again later.",
-      );
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "An Error Occured. Please Try Again.",
+        confirmButtonColor: "#d33",
+      });
     })
 
     .finally(() => {
