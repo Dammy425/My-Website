@@ -43,8 +43,34 @@ body {
   margin: 0 auto;
   padding: 0 25px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+}
+
+/* ---------- LOGO ---------- */
+.logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.25);
+  cursor: pointer;
+  transition: 0.35s ease;
+}
+
+.logo span {
+  color: white;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.logo:hover {
+  transform: rotate(-6deg) scale(1.08);
+  box-shadow: 0 10px 25px rgba(0, 123, 255, 0.4);
 }
 
 .navbar ul {
@@ -593,7 +619,7 @@ body {
 
 @media (max-width: 768px) {
   .nav-container {
-    justify-content: flex-end;
+    justify-content: space-between;
   }
 
   .nav-toggle-label {
