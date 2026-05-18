@@ -47,30 +47,23 @@ body {
   align-items: center;
 }
 
-/* ---------- LOGO ---------- */
+/* ---------- SVG LOGO ---------- */
 .logo {
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, #007bff, #00c6ff);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.25);
   cursor: pointer;
-  transition: 0.35s ease;
 }
 
-.logo span {
-  color: white;
-  font-size: 28px;
-  font-weight: 800;
-  letter-spacing: 1px;
+.logo-svg {
+  width: 58px;
+  height: 58px;
+  transition: transform 0.35s ease;
+  filter: drop-shadow(0 6px 15px rgba(0, 123, 255, 0.3));
 }
 
-.logo:hover {
-  transform: rotate(-6deg) scale(1.08);
-  box-shadow: 0 10px 25px rgba(0, 123, 255, 0.4);
+.logo-svg:hover {
+  transform: rotate(-8deg) scale(1.08);
 }
 
 .navbar ul {
