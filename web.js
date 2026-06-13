@@ -20,6 +20,18 @@ const contactForm = document.getElementById("contact-form");
 if (contactForm) {
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
+
+    const validationError = validateContactForm();
+    if (validationError) {
+      Swal.fire({
+        icon: "error",
+        title: "Check your form",
+        text: validationError,
+        confirmButtonColor: "#d33",
+      });
+      return;
+    }
+
     const btn = this.querySelector("button");
     const originalText = btn.innerText;
 
@@ -83,6 +95,17 @@ window.addEventListener("click", (e) => {
 
 testimonialForm.addEventListener("submit", function (e) {
   e.preventDefault();
+
+  const validationError = validateTestimonialForm();
+  if (validationError) {
+    Swal.fire({
+      icon: "error",
+      title: "Check your form",
+      text: validationError,
+      confirmButtonColor: "#d33",
+    });
+    return;
+  }
 
   const submitBtn = this.querySelector("button");
   submitBtn.innerText = "Sending...";

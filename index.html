@@ -22,41 +22,43 @@
     <nav class="navbar">
       <div class="nav-container">
         <div class="logo">
-          <svg
-            viewBox="0 0 100 100"
-            xmlns="http://www.w3.org/2000/svg"
-            class="logo-svg"
-          >
-            <defs>
-              <linearGradient
-                id="blueGradient"
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="100%"
-              >
-                <stop offset="0%" stop-color="#007bff" />
-                <stop offset="100%" stop-color="#00c6ff" />
-              </linearGradient>
-            </defs>
+          <a href="#home"
+            ><svg
+              viewBox="0 0 100 100"
+              xmlns="http://www.w3.org/2000/svg"
+              class="logo-svg"
+            >
+              <defs>
+                <linearGradient
+                  id="blueGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stop-color="#007bff" />
+                  <stop offset="100%" stop-color="#00c6ff" />
+                </linearGradient>
+              </defs>
 
-            <!-- outer shape -->
-            <rect
-              x="8"
-              y="8"
-              width="84"
-              height="84"
-              rx="22"
-              fill="url(#blueGradient)"
-            />
+              <!-- outer shape -->
+              <rect
+                x="8"
+                y="8"
+                width="84"
+                height="84"
+                rx="22"
+                fill="url(#blueGradient)"
+              />
 
-            <!-- custom D -->
-            <path
-              d="M35 25 H50 Q72 25 72 50 Q72 75 50 75 H35 Z
+              <!-- custom D -->
+              <path
+                d="M35 25 H50 Q72 25 72 50 Q72 75 50 75 H35 Z
          M45 38 V62 H50 Q60 62 60 50 Q60 38 50 38 Z"
-              fill="white"
-            />
-          </svg>
+                fill="white"
+              />
+            </svg>
+          </a>
         </div>
 
         <input type="checkbox" id="nav-toggle" class="nav-toggle" />
@@ -328,7 +330,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="web.js"></script>
     <script src="script.js"></script>
+    <script src="web.js"></script>
   </body>
 </html>

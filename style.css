@@ -465,6 +465,10 @@ body {
   display: flex;
 }
 
+.swal2-container {
+  z-index: 3000;
+}
+
 .modal-content {
   background: white;
   padding: 40px;
